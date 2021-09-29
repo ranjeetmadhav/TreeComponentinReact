@@ -1,0 +1,23 @@
+
+<app-list [heading]= "value"[liststat]="regstat" 
+ [headdata]="regdata" (detaildata)="viewdata($event)" (deletedata)="deletedata($event)"  (editdata)="editdata($event)" ></app-list>
+
+ 
+
+
+ 
+ 
+
+    <form [formGroup]="regform" (ngSubmit)="editsubmit()">
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name"placeholder="Enter name">
+          
+        </div>
+        <div class="form-group">
+          <label for="">Seat</label>
+          <input type="text" class="form-control" formControlName="seat" placeholder="Total seat">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
